@@ -1,5 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe Post, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Post do
+
+  it "has a valid factory" do
+    user = create(:user)
+    expect(build(:post, author: user)).to be_valid
+  end
 end

@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :comment do
-    body "MyString"
-    author_id nil
+    association :author
+    body {Faker::Lorem.sentence}
     published_at "2017-02-22"
   end
 end

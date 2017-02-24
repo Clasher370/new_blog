@@ -1,8 +1,8 @@
 FactoryGirl.define do
   factory :post do
-    title "MyString"
-    body "MyString"
-    author nil
+    association :author
+    title {Faker::Lorem.word}
+    body {Faker::Lorem.sentence}
     published_at "2017-02-22"
   end
 end
