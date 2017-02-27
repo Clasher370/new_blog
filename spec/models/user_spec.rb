@@ -23,7 +23,8 @@ describe User do
     user.valid?
     expect(user.errors[:password]).to include("can't be blank")
   end
-  
+
+
 
 end
 
