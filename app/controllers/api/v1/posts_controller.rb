@@ -1,5 +1,7 @@
 class Api::V1::PostsController < ApplicationController
 
+  before_action :authenticate
+
   def index
     @posts = Post.order(published_at: :desc).paginate(:page => params[:page], :per_page => '10')
     render json: @posts
